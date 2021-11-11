@@ -1,0 +1,115 @@
+baseURL = "https://bqdong.github.io"
+languageCode = "zh-CN"
+title = "BQDong's Blog"
+copyright = "© bqdong 2021"
+paginate = 6
+googleAnalytics = ""
+disqusShortname = "hugo-minima"
+
+# theme is the name of the hugo theme you choose,
+# `hugo-theme-minima` is put here only for debuging,
+# just name it whatever you're gonna handle the theme.
+theme = "minima"
+
+# Author has some of your information to be shown on the home 
+# page of your blog.
+[author]
+name = "bqdong"
+slogon = "一个热爱编程的编程新手"
+description = "任何事只有热爱才能坚持下去"
+
+
+[params]
+# iam is the beginning words of your self-introduction.
+iam = "欢迎访问！大家好，我是"
+# The subtitle will be shown after the title of your blog site.
+# e.g. "title - subtitle".
+subtitle = ""
+# Comment decides the comment plugin to be used on your blog site, 
+# e.g. disqus, ovo.
+comment = "disqus"
+# timeformat 
+timeformat = "Jan 02, 2006"
+# switch for turning on/off lights.
+switch = ["🌚", "🌝"]
+# if true, date of posts will be displayed in the homepage.
+displayDate = true
+# if true, users can select text from your post.
+selectable = true
+# custom global font. notice:  `globalFontFamily` won't be working
+# on texts in some special positions. e.g. title 
+globalFontFamily = 'Helvatica, sans-serif'
+
+
+# OvO is a comment plugin written by the author of Minima. 
+# It is enabled when params.comment is set "ovo". You can
+# find its documentation on https://github.com/ovojs/ovo.
+# If you are using disqus, just ignore this field.
+[params.ovo]
+server = ""
+placeholder = ""
+
+
+# Params.social is an array containing your social network accounts,
+# Each has a lowercase name, a svg formatted icon and a url to the 
+# webpage of your account. They will be shown at the bottom of every
+# page of your blog. 
+# Be sure the svgs you use must have both its width and its height
+# set 18. If you don't wanna put the svg code in this config file, 
+# you can instead save them to the `data/svg.toml` file under the
+# root directory of your blog. e.g. `name = '<svg>'`
+[[params.social]]
+name = "github"  
+url = "https://github.com/bqdong"
+svg = ""
+# [[params.social]]
+#name = "linkedin"
+#url = "https://linkedin/in/leonard-mivinci-63895317a"
+#svg = ""
+#[[params.social]]
+#name = "twitter"
+#url = "https://twitter.com/Leonard14733745"
+#svg = ""
+#[[params.social]]
+#name = "rss"
+#url = "/index.xml"
+#svg = ""
+
+
+# Menu.main is an array that's used to decide what entries can be shown
+# on the navigator of yur blog. You can use a weight to make them ordered.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+[[menu.main]]
+name = "Categories"
+url = "/categories"
+weight = 2
+[[menu.main]]
+name = "Series"
+url = "/series"
+weight = 3
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
+
+
+# You can classify your posts by setting taxanomies in the front matter
+# e.g.
+#     categories = ["dev"]
+#     series = ["Building an RPC server"]
+#     tags = ["hugo", "golang"]
+# A little suggestion: one post belongs to one series or one category or multiple tags.
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+
+# Make sure all the codes in a post are highlighted correctly
+# so better not edit this.
+[markup.highlight]
+lineNos = true
+noClasses = false
