@@ -14,14 +14,14 @@ theme = "minima"
 # Author has some of your information to be shown on the home 
 # page of your blog.
 [author]
-name = "bqdong"
-slogon = "一个热爱编程的编程新手"
-description = "任何事只有热爱才能坚持下去"
+name = ""
+slogon = ""
+description = "Read what you read until you love to read. Do what you love until you love to do."
 
 
 [params]
 # iam is the beginning words of your self-introduction.
-iam = "欢迎访问！大家好，我是"
+iam = "Keep hacking"
 # The subtitle will be shown after the title of your blog site.
 # e.g. "title - subtitle".
 subtitle = ""
@@ -31,7 +31,7 @@ comment = "disqus"
 # timeformat 
 timeformat = "Jan 02, 2006"
 # switch for turning on/off lights.
-switch = ["🌚", "🌝"]
+switch = ["🌜", "🌞"]
 # if true, date of posts will be displayed in the homepage.
 displayDate = true
 # if true, users can select text from your post.
@@ -78,20 +78,21 @@ svg = ""
 
 # Menu.main is an array that's used to decide what entries can be shown
 # on the navigator of yur blog. You can use a weight to make them ordered.
+[menu]
 [[menu.main]]
-name = "Home"
+name = "首页"
 url = "/"
 weight = 1
 [[menu.main]]
-name = "Categories"
+name = "分类"
 url = "/categories"
 weight = 2
 [[menu.main]]
-name = "Series"
+name = "系列"
 url = "/series"
 weight = 3
 [[menu.main]]
-name = "About"
+name = "关于我"
 url = "/about"
 weight = 4
 
