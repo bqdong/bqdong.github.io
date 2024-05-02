@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts"
+  },
+  "imports": {
+    "@shikijs/markdown-it": "npm:@shikijs/markdown-it@^1.4.0",
+    "@std/fs": "jsr:@std/fs@^0.224.0",
+    "markdown-it": "npm:markdown-it@^14.1.0"
+  }
+}
