@@ -1,5 +1,6 @@
 import MarkdownIt from "markdown-it";
 import Shiki from "@shikijs/markdown-it";
+import { walk } from "@std/fs";
 
 const md = MarkdownIt();
 md
@@ -12,5 +13,10 @@ md
     }),
   );
 
-const result = md.render("# markdown-it rulezz!");
-console.log(result);
+for await (const entry of walk("blog")) {
+  if (entry.isFile) {
+    const content = await Deno.readTextFile(entry.path);
+    const result = md.render(content);
+    console.log(result);
+  }
+}
