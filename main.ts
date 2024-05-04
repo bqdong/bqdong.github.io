@@ -1,6 +1,6 @@
 import MarkdownIt from "markdown-it";
 import Shiki from "@shikijs/markdown-it";
-import { walk } from "@std/fs";
+import { ensureFile, walk } from "@std/fs";
 
 const md = MarkdownIt();
 md
@@ -20,3 +20,16 @@ for await (const entry of walk("blog")) {
     console.log(result);
   }
 }
+
+const targetDir = "dist";
+
+
+const indexHtml =
+`
+<h1>Hello world</h1>
+<p>This is a test</p>
+`;
+
+// write index
+await ensureFile(`${targetDir}/index.html`)
+await Deno.writeTextFile(`${targetDir}/index.html`, indexHtml)
