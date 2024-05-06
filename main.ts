@@ -13,22 +13,17 @@ md
     }),
   );
 
-for await (const entry of walk("blog")) {
+const srcDir = "blog";
+const targetDir = "dist";
+
+for await (const entry of walk(srcDir)) {
   if (entry.isFile) {
     const content = await Deno.readTextFile(entry.path);
     const result = md.render(content);
-    console.log(result);
+    const mdFilePath = entry.path;
+    const htmlFilePath = targetDir + "/" + mdFilePath.substring(mdFilePath.indexOf(targetDir) + targetDir.length + 1).replace(".md", ".html");
+    await ensureFile(htmlFilePath);
+    await Deno.writeTextFile(htmlFilePath, result);
   }
 }
 
-const targetDir = "dist";
-
-
-const indexHtml =
-`<h1>Hello world</h1>
-<p>This is a test</p>
-`;
-
-// write index
-await ensureFile(`${targetDir}/index.html`)
-await Deno.writeTextFile(`${targetDir}/index.html`, indexHtml)
