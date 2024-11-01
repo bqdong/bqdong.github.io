@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
+import MdContent from './MdContent.vue'
 
 // https://vitepress.dev/reference/runtime-api#usedata
 const { site, frontmatter } = useData()
@@ -17,6 +18,6 @@ const { site, frontmatter } = useData()
   </div>
   <div v-else>
     <a href="/">Home</a>
-    <Content />
+    <MdContent />
   </div>
 </template>

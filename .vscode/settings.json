@@ -2,7 +2,7 @@
   "deno.enable": true,
   "[jsonc]": {
     "editor.quickSuggestions": {
-        "strings": true
+      "strings": true
     },
     "editor.suggest.insertMode": "replace",
     "editor.indentSize": "tabSize",
@@ -16,4 +16,8 @@
     "editor.indentSize": "tabSize",
     "editor.tabSize": 2
   },
+  "[vue]": {
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 2
+  }
 }
