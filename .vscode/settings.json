@@ -1,0 +1,19 @@
+{
+  "deno.enable": true,
+  "[jsonc]": {
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 2
+  },
+  "[typst-code]": {
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 2
+  },
+}

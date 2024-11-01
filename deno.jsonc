@@ -1,0 +1,17 @@
+{
+  "tasks": {
+    "dev": "deno run -A npm:vitepress@^1.4.3",
+    "build": "deno run -A npm:vitepress@^1.4.3 build",
+    "preview": "deno run -A npm:vitepress@^1.4.3 preview"
+  },
+  "imports": {
+    "vitepress": "npm:vitepress@^1.4.3",
+    "vue": "npm:vue@^3.5.12"
+  },
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "types": [
+      "./global.d.ts"
+    ]
+  }
+}
