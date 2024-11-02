@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted } from "vue";
 
 onMounted(() => {
-  console.log('onMounted')
-})
+  console.log("onMounted");
+});
 </script>
 
 <template>
   <div>
     <ul>
-        <li>About</li>
-        <li>Resource</li>
-        <li>Blog</li>
-        <li>Project</li>
+      <li>About</li>
+      <li>Resource</li>
+      <li>Blog</li>
+      <li>Project</li>
     </ul>
   </div>
 </template>

@@ -3,9 +3,12 @@
     "dev": "deno run -A npm:vitepress@^1.4.3",
     "build": "deno run -A npm:vitepress@^1.4.3 build",
     "preview": "deno run -A npm:vitepress@^1.4.3 preview",
-    "fmt": "deno fmt --ignore=.vitepress/dist,.vitepress/cache .",
-    "check": "deno task clean && deno check .vitepress/**/*.ts *.ts",
-    "lint": "deno lint --ignore=.vitepress/dist,.vitepress/cache .",
+    "fmt": "deno task fmt-ts && deno task fmt-vue",
+    "fmt-ts": "deno fmt --ignore=.vitepress/dist,.vitepress/cache . ",
+    "fmt-vue": "deno run -A npm:prettier --write **/*.vue",
+    "lint": "deno task lint-ts && deno task lint-vue",
+    "lint-ts": "deno lint --ignore=.vitepress/dist,.vitepress/cache .",
+    "lint-vue": "deno run -A npm:oxlint@latest .vitepress/**/*.vue",
     "clean": "rm -rf .vitepress/dist .vitepress/cache"
   },
   "imports": {

@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
-import MdContent from './MdContent.vue'
+import { useData } from "vitepress";
+import MdContent from "./MdContent.vue";
+import Header from "./Header.vue";
 
 // https://vitepress.dev/reference/runtime-api#usedata
-const { site, frontmatter } = useData()
+const { site, frontmatter } = useData();
 </script>
 
 <template>
+  <Header />
+  <Hello />
   <div v-if="frontmatter.home">
     <h1>{{ site.title }}</h1>
     <p>{{ site.description }}</p>
