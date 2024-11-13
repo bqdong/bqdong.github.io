@@ -1,0 +1,29 @@
+#!/bin/env -S deno run --allow-run="git"
+
+// check tag format
+const command = new Deno.Command("git", {
+  args: [
+    "tag",
+  ],
+});
+const { code, stdout, stderr } = await command.output();
+const decoder = new TextDecoder("utf-8");
+if (code !== 0) {
+  console.error(`%c${decoder.decode(stderr)}`);
+  Deno.exit(-1);
+}
+
+if (code < 1) {
+  Deno.exit(0);
+}
+
+const reg =
+  /^v?(\d+)\.(\d+)\.(\d+)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?$/;
+const tags = decoder.decode(stdout);
+const tagArr = tags.split(/\r?\n/);
+for (const tag of tagArr) {
+  if (tag && !reg.test(tag)) {
+    console.error("%cTag name illegal, see https://semver.org/", "color: red");
+    Deno.exit(-2);
+  }
+}

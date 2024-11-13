@@ -1,0 +1,10 @@
+#!/bin/env -S deno run --allow-read
+
+const msgFilePath = Deno.args[0];
+const msg = await Deno.readTextFile(msgFilePath);
+const reg = /^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test){1}(\([\w\-\.]+\))?(!)?: ([\w ])+([\s\S]*)/;
+if (!reg.test(msg)) {
+  console.error("%cMust be conventional message, see https://www.conventionalcommits.org/en/v1.0.0/", "color: red");
+  Deno.exit(1);
+}
+

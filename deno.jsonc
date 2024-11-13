@@ -2,6 +2,7 @@
   "tasks": {
     "dev": "deno run -A npm:vitepress@^1.4.3",
     "build": "deno run -A npm:vitepress@^1.4.3 build",
+    "check": "deno task fmt && deno task lint",
     "preview": "deno run -A npm:vitepress@^1.4.3 preview",
     "fmt": "deno task fmt-ts && deno task fmt-vue",
     "fmt-ts": "deno fmt --ignore=.vitepress/dist,.vitepress/cache . ",
@@ -9,9 +10,12 @@
     "lint": "deno task lint-ts && deno task lint-vue",
     "lint-ts": "deno lint --ignore=.vitepress/dist,.vitepress/cache .",
     "lint-vue": "deno run -A npm:oxlint@latest .vitepress/**/*.vue",
+    "fix-vue": "deno run -A npm:oxlint@latest --fix .vitepress/**/*.vue",
     "clean": "rm -rf .vitepress/dist .vitepress/cache"
   },
   "imports": {
+    "@std/assert": "jsr:@std/assert@^1.0.8",
+    "@std/fs": "jsr:@std/fs@^1.0.5",
     "@vitejs/plugin-vue": "npm:@vitejs/plugin-vue@^5.1.4",
     "less": "npm:less@^4.2.0",
     "vitepress": "npm:vitepress@^1.4.3",
