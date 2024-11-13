@@ -2,7 +2,6 @@
 import { useData } from "vitepress";
 import MdContent from "./MdContent.vue";
 import Header from "./Header.vue";
-// @ts-ignore
 import { data } from "./data-loaders/all-post.data";
 
 // https://vitepress.dev/reference/runtime-api#usedata
