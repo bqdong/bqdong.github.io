@@ -1,6 +1,6 @@
 #!/bin/env -S deno run --allow-run="deno,git"
 
-// lint and format code
+// format code
 const fmtCmd = new Deno.Command("deno", {
   args: ["task", "fmt"],
 });
@@ -10,6 +10,7 @@ if (fmtResult.code !== 0) {
   Deno.exit(1);
 }
 
+// add formatted content again
 const gitAddCmd = new Deno.Command("git", {
   args: ["add", "."],
 });
@@ -21,6 +22,7 @@ if (addCmd.code !== 0) {
   Deno.exit(1);
 }
 
+// lint code
 const lintCmd = new Deno.Command("deno", {
   args: ["task", "lint"],
 });
@@ -29,5 +31,17 @@ if (lintResult.code !== 0) {
   console.error("Lint not pass!\n");
   const decoder = new TextDecoder();
   console.error(decoder.decode(lintResult.stderr));
+  Deno.exit(1);
+}
+
+// test
+const testCmd = new Deno.Command("deno", {
+  args: ["task", "test"],
+});
+const testResult = await testCmd.output();
+if (testResult.code !== 0) {
+  console.error("Test not pass!\n");
+  const decoder = new TextDecoder();
+  console.error(decoder.decode(testResult.stderr));
   Deno.exit(1);
 }

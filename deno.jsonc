@@ -11,6 +11,7 @@
     "lint-ts": "deno lint --ignore=.vitepress/dist,.vitepress/cache .",
     "lint-vue": "deno run -A npm:oxlint@latest .vitepress/**/*.vue",
     "fix-vue": "deno run -A npm:oxlint@latest --fix .vitepress/**/*.vue",
+    "test": "deno test -A",
     "clean": "rm -rf .vitepress/dist .vitepress/cache"
   },
   "imports": {
