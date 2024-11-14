@@ -9,8 +9,8 @@
     "fmt-vue": "deno run -A npm:prettier --write **/*.vue",
     "lint": "deno task lint-ts && deno task lint-vue",
     "lint-ts": "deno lint --ignore=.vitepress/dist,.vitepress/cache .",
-    "lint-vue": "deno run -A npm:oxlint@latest .vitepress/**/*.vue",
-    "fix-vue": "deno run -A npm:oxlint@latest --fix .vitepress/**/*.vue",
+    "lint-vue": "deno run -A npm:oxlint@latest -c .oxlintrc.json .vitepress/**/*.vue",
+    "fix-vue": "deno run -A npm:oxlint@latest -c .oxlintrc.json  --fix .vitepress/**/*.vue",
     "test": "deno test -A",
     "clean": "rm -rf .vitepress/dist .vitepress/cache"
   },
