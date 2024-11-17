@@ -1,3 +1,5 @@
+export NPM_CONFIG_REGISTRY := "https://registry.npmmirror.com"
+
 _default:
     just -l
 
@@ -5,3 +7,7 @@ _default:
 install-git-hook:
     cp .git-hooks/* .git/hooks/
     chmod +x .git/hooks/*
+
+# start dev env
+dev:
+	deno task dev
