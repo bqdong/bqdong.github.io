@@ -6,7 +6,8 @@
     },
     "editor.suggest.insertMode": "replace",
     "editor.indentSize": "tabSize",
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "denoland.vscode-deno"
   },
   "[typst-code]": {
     "editor.indentSize": "tabSize",
@@ -18,6 +19,8 @@
   },
   "[vue]": {
     "editor.indentSize": "tabSize",
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Vue.volar"
   }
 }

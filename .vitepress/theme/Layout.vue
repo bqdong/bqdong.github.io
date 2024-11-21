@@ -15,7 +15,7 @@ const a = "b";
 <template>
   <NotFound v-if="page.isNotFound" />
   <template v-else>
-    <Header :currentTab="'Home'" />
+    <Header :currentTab='"Home"' />
     <Home v-if="frontmatter.home" />
     <MdContent v-else-if="frontmatter.about" />
     <Post v-else />

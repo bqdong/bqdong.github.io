@@ -18,7 +18,7 @@ const tabs = ref([
         <li
           v-for="tab in tabs"
           :key="tab.name"
-          :class="tab.name === props.currentTab ? 'active' : ''"
+          :class='tab.name === props.currentTab ? "active" : ""'
         >
           <a :href="tab.link">
             {{ tab.name }}
