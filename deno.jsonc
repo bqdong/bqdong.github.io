@@ -1,13 +1,15 @@
 {
   "tasks": {
-    "dev": "deno run -A npm:vitepress@^1.4.3",
-    "build": "deno run -A npm:vitepress@^1.4.3 build",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
     "check": "deno task fmt && deno task lint",
     "preview": "deno run -A npm:vitepress@^1.4.3 preview",
-    "fmt": "deno fmt .",
+    "fmt": "deno fmt",
     "lint": "deno task lint-ts && deno task lint-vue",
     "lint-ts": "deno lint --ignore=.vitepress/dist,.vitepress/cache .",
     "lint-vue": "deno run -A npm:oxlint@latest -c .oxlintrc.json .vitepress/**/*.vue",
+    "fix": "deno task fix-ts && deno task fix-vue",
+    "fix-ts": "deno lint --fix",
     "fix-vue": "deno run -A npm:oxlint@latest -c .oxlintrc.json  --fix .vitepress/**/*.vue",
     "test": "deno test -A",
     "clean": "rm -rf .vitepress/dist .vitepress/cache"
@@ -15,11 +17,12 @@
   "imports": {
     "@std/assert": "jsr:@std/assert@^1.0.8",
     "@std/datetime": "jsr:@std/datetime@^0.225.2",
-    "@std/fs": "jsr:@std/fs@^1.0.5",
-    "@vitejs/plugin-vue": "npm:@vitejs/plugin-vue@^5.1.4",
+    "@std/fs": "jsr:@std/fs@^1.0.6",
+    "@std/path": "jsr:@std/path@^1.0.8",
+    "@vitejs/plugin-vue": "npm:@vitejs/plugin-vue@^5.2.0",
     "less": "npm:less@^4.2.0",
-    "vitepress": "npm:vitepress@^1.4.3",
-    "vue": "npm:vue@^3.5.12"
+    "vitepress": "npm:vitepress@^1.5.0",
+    "vue": "npm:vue@^3.5.13"
   },
   "unstable": ["fmt-component"],
   "nodeModulesDir": "auto",

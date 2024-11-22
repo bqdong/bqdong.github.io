@@ -29,5 +29,5 @@ export async function getFileCreateTimestamp(filePath: string) {
 
   const decoder = new TextDecoder();
   const d = decoder.decode(stdout);
-  return Number(d);
+  return Number(d) * 1000;
 }

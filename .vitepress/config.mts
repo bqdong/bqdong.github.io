@@ -4,5 +4,5 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Blog",
   description: "Blog for bqdong.",
-  srcExclude: ["**/README.md", "**/TODO.md"],
+  srcExclude: ["README.md", "TODO.md"],
 });

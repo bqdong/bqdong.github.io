@@ -11,3 +11,7 @@ install-git-hook:
 # start dev env
 dev:
 	deno task dev
+
+# bump dependencies
+bump-deps:
+    deno outdated --update
