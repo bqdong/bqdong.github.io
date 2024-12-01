@@ -8,9 +8,6 @@
 
 <style lang="less">
 .md-content {
-  h1 {
-    color: red;
-    font-size: 16px;
-  }
+  padding: 0 20px;
 }
 </style>

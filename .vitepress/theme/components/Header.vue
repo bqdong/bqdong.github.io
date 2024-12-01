@@ -1,31 +1,14 @@
-<script setup lang="ts">
-import { ref } from "vue";
-
-const props = defineProps<{
-  currentTab: "Home" | "About";
-}>();
-
-const tabs = ref([
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-]);
-</script>
-
 <template>
   <div>
+    <div class="logo"></div>
+
     <nav class="navbar">
-      <ul>
-        <li
-          v-for="tab in tabs"
-          :key="tab.name"
-          :class='tab.name === props.currentTab ? "active" : ""'
-        >
-          <a :href="tab.link">
-            {{ tab.name }}
-          </a>
-        </li>
-      </ul>
+      <ul></ul>
     </nav>
+
+    <div class="separator"></div>
+
+    <div class="actions"></div>
   </div>
 </template>
 
