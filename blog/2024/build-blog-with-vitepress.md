@@ -1,3 +1,7 @@
+---
+title: Hello world
+---
+
 # Hello, world
 
 第一篇博客。正文如下：

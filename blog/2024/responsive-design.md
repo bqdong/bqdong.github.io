@@ -1,3 +1,7 @@
+---
+title: Background for responsive design
+---
+
 # How to responsive design ?
 
 ## Screen size
@@ -24,6 +28,7 @@
 For example:
 
 - iPhone 15 Pro Max:
+
   - Screen resolution: 2796 × 1290 (physical pixels)
   - DPR: 3
   - CSS viewport: 932 × 430 (CSS pixels)
@@ -44,14 +49,16 @@ For example:
 You can get the Device Pixel Ratio (DPR) in several ways:
 
 1. JavaScript:
+
    ```javascript
    // Method 1: Using window.devicePixelRatio (Most common)
    const dpr = window.devicePixelRatio;
    console.log(dpr); // e.g., 2 for Retina displays
 
    // Method 2: Using matchMedia
-   const isDpr2 =
-     window.matchMedia("(-webkit-min-device-pixel-ratio: 2)").matches;
+   const isDpr2 = window.matchMedia(
+     "(-webkit-min-device-pixel-ratio: 2)",
+   ).matches;
    console.log(isDpr2); // true for displays with DPR >= 2
 
    // Method 3: Listen for DPR changes
@@ -63,6 +70,7 @@ You can get the Device Pixel Ratio (DPR) in several ways:
    ```
 
 2. CSS Media Queries:
+
    ```css
    /* For 2x DPR */
    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -76,6 +84,7 @@ You can get the Device Pixel Ratio (DPR) in several ways:
    ```
 
 3. Practical Use Case - Canvas:
+
    ```javascript
    // Get a sharp canvas on high DPR displays
    const canvas = document.querySelector("canvas");
@@ -111,6 +120,7 @@ DPR = Physical Pixels / CSS Pixels
 For example:
 
 - iPhone 15 Pro Max:
+
   ```javascript
   DPR = 2796 / 932 = 3
   // width: 2796 physical pixels ÷ 932 CSS pixels = 3
@@ -141,6 +151,7 @@ A 2K/QHD monitor has a physical resolution of 2560 × 1440 pixels. Here's how
 different OS scaling settings affect the CSS pixels and DPR:
 
 1. 100% scaling (no scaling):
+
    ```javascript
    Physical Resolution: 2560 × 1440
    CSS Viewport: 2560 × 1440
@@ -148,6 +159,7 @@ different OS scaling settings affect the CSS pixels and DPR:
    ```
 
 2. 125% scaling:
+
    ```javascript
    Physical Resolution: 2560 × 1440
    CSS Viewport: 2048 × 1152
@@ -155,6 +167,7 @@ different OS scaling settings affect the CSS pixels and DPR:
    ```
 
 3. 150% scaling:
+
    ```javascript
    Physical Resolution: 2560 × 1440
    CSS Viewport: 1707 × 960
@@ -180,6 +193,7 @@ A 4K monitor has a physical resolution of 3840 × 2160 pixels. Here's how
 different OS scaling settings affect the CSS pixels and DPR:
 
 1. 100% scaling (no scaling):
+
    ```javascript
    Physical Resolution: 3840 × 2160
    CSS Viewport: 3840 × 2160
@@ -188,6 +202,7 @@ different OS scaling settings affect the CSS pixels and DPR:
    ```
 
 2. 150% scaling:
+
    ```javascript
    Physical Resolution: 3840 × 2160
    CSS Viewport: 2560 × 1440
@@ -196,6 +211,7 @@ different OS scaling settings affect the CSS pixels and DPR:
    ```
 
 3. 200% scaling (recommended):
+
    ```javascript
    Physical Resolution: 3840 × 2160
    CSS Viewport: 1920 × 1080
@@ -239,7 +255,7 @@ Today, Responsive Web Design is generally considered the best practice,
 ## meta element for viewport
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
 ## Viewport Meta Element
@@ -247,7 +263,7 @@ Today, Responsive Web Design is generally considered the best practice,
 The viewport meta tag is crucial for responsive design:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
 ### Attributes Explained:
@@ -263,18 +279,19 @@ The viewport meta tag is crucial for responsive design:
 <meta
   name="viewport"
   content="width=device-width, initial-scale=1, user-scalable=no"
->
+/>
 
 <!-- Set minimum and maximum zoom levels -->
 <meta
   name="viewport"
   content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2"
->
+/>
 ```
 
 ### Why It's Important:
 
 1. Without this tag:
+
    - Mobile browsers often default to rendering pages at a desktop width (e.g.,
      980px)
    - Then shrinking the result to fit the mobile screen
@@ -412,6 +429,7 @@ The viewport meta tag is crucial for responsive design:
 ### Key Differences:
 
 1. Adaptive:
+
    - Uses fixed pixel widths
    - "Jumps" between layouts
    - Better for specific device targets

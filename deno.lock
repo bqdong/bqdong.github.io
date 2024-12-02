@@ -8,9 +8,11 @@
     "jsr:@std/internal@^1.0.5": "1.0.5",
     "jsr:@std/path@^1.0.8": "1.0.8",
     "npm:@vitejs/plugin-vue@^5.2.1": "5.2.1_vite@6.0.1__less@4.2.1_vue@3.5.13_less@4.2.1",
+    "npm:latex.css@^1.12.0": "1.12.0",
     "npm:less@^4.2.1": "4.2.1",
     "npm:oxlint@latest": "0.10.3",
     "npm:prettier@*": "3.3.3",
+    "npm:vitepress@1.5.0": "1.5.0_vite@5.4.11__less@4.2.1_vue@3.5.13_focus-trap@7.6.2_less@4.2.1",
     "npm:vitepress@^1.5.0": "1.5.0_vite@5.4.11__less@4.2.1_vue@3.5.13_focus-trap@7.6.2_less@4.2.1",
     "npm:vue@^3.5.13": "3.5.13"
   },
@@ -837,6 +839,9 @@
     "is-what@4.1.16": {
       "integrity": "sha512-ZhMwEosbFJkA0YhFnNDgTM4ZxDRsS6HqTo7qsZM08fehyRYIYa0yHu5R6mgo1n/8MgaPBXiPimPD77baVFYg+A=="
     },
+    "latex.css@1.12.0": {
+      "integrity": "sha512-cD5UrbvxWyjP+Mrd6ZGEbep6mQH6aEcRV4O38HQMM06v54Vp1GsQf6j/al8sdgUAAn3pQmWPWpdnOlgUpDz72Q=="
+    },
     "less@4.2.1": {
       "integrity": "sha512-CasaJidTIhWmjcqv0Uj5vccMI7pJgfD9lMkKtlnTHAdJdYK/7l8pM9tumLyJ0zhbD4KJLo/YvTj+xznQd5NBhg==",
       "dependencies": [
@@ -1195,6 +1200,7 @@
       "jsr:@std/fs@^1.0.6",
       "jsr:@std/path@^1.0.8",
       "npm:@vitejs/plugin-vue@^5.2.1",
+      "npm:latex.css@^1.12.0",
       "npm:less@^4.2.1",
       "npm:vitepress@^1.5.0",
       "npm:vue@^3.5.13"

@@ -6,6 +6,7 @@ import Home from "./Home.vue";
 import Post from "./components/Post.vue";
 import NotFound from "./NotFound.vue";
 import "./styles/normalize.css";
+import "latex.css";
 
 // https://vitepress.dev/reference/runtime-api#usedata
 const { frontmatter, page } = useData();
