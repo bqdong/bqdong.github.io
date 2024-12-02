@@ -22,6 +22,18 @@ if (addCmd.code !== 0) {
   Deno.exit(1);
 }
 
+// check code
+const checkCmd = new Deno.Command("deno", {
+  args: ["task", "check"],
+});
+const checkResult = await checkCmd.output();
+if (checkResult.code !== 0) {
+  console.error("Check not pass!\n");
+  const decoder = new TextDecoder();
+  console.error(decoder.decode(checkResult.stderr));
+  Deno.exit(1);
+}
+
 // lint code
 const lintCmd = new Deno.Command("deno", {
   args: ["task", "lint"],

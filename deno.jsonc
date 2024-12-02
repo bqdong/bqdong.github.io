@@ -2,7 +2,7 @@
   "tasks": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "check": "deno task fmt && deno task lint",
+    "check": "deno check .vitepress/**/*.ts",
     "preview": "deno run -A npm:vitepress@^1.4.3 preview",
     "fmt": "deno fmt",
     "lint": "deno task lint-ts && deno task lint-vue",

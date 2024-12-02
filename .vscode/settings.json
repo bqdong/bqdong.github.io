@@ -17,6 +17,10 @@
     "editor.indentSize": "tabSize",
     "editor.tabSize": 2
   },
+  "[typescript]": {
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 2
+  },
   "[vue]": {
     "editor.indentSize": "tabSize",
     "editor.tabSize": 2,
